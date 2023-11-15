@@ -3,7 +3,7 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import { Container } from 'react-bootstrap';
 
-const App = () => {
+const App = (sd) => {
   return (
     <div>
       <Header />
