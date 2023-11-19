@@ -1,18 +1,26 @@
-import React from "react";
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
-import { Container } from 'react-bootstrap';
+import React from 'react'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { Container } from 'react-bootstrap'
 
-const App = (sd) => {
+import Home from './pages/Home'
+import Product from './pages/Product'
+
+import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer'
+
+const App = () => {
   return (
-    <div>
+    <Router>
       <Header />
-      <Container>
-        <h2>FC Market</h2>
-      </Container>
+      <main className="py-3">
+        <Container>
+          <Route path="/" component={Home} exact />
+          <Route path="/product/:id" component={Product} />
+        </Container>
+      </main>
       <Footer />
-    </div>
-  );
-};
+    </Router>
+  )
+}
 
-export default App;
+export default App

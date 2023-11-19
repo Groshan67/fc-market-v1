@@ -1,9 +1,10 @@
-import React from "react";
-import  ReactDOM  from "react";
-import App from "./App";
+import React from 'react'
+import ReactDOM from 'react-dom'
+
+import App from './App'
+
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'font-awesome/css/font-awesome.min.css'
 import './index.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
 
- 
-
-ReactDOM.render(<App /> , document.getElementById('root'))
+ReactDOM.render(<App />, document.getElementById('root'))
